@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddHouse" xml:space="preserve">
+    <value>Woning aanmaken</value>
+  </data>
+  <data name="Addition" xml:space="preserve">
+    <value>Toevoeging</value>
+  </data>
+  <data name="AddressInformation" xml:space="preserve">
+    <value>Adres gegevens</value>
+  </data>
+  <data name="AdminPortal" xml:space="preserve">
+    <value>Beheerdersportaal</value>
+  </data>
+  <data name="BuildYear" xml:space="preserve">
+    <value>Bouwjaar</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Stad</value>
+  </data>
+  <data name="CityEmpty" xml:space="preserve">
+    <value>Vul eerst een stad in</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Wissen</value>
+  </data>
+  <data name="Complex" xml:space="preserve">
+    <value>Complex</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="CountryEmpty" xml:space="preserve">
+    <value>Vul eerst een land in</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Klant</value>
+  </data>
+  <data name="CustomerEmpty" xml:space="preserve">
+    <value>Selecteer eerst een klant</value>
+  </data>
+  <data name="CustomerInformation" xml:space="preserve">
+    <value>Klantgegevens</value>
+  </data>
+  <data name="Daeb" xml:space="preserve">
+    <value>Daeb</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Omschrijving</value>
+  </data>
+  <data name="DocumentCreated" xml:space="preserve">
+    <value>Document is succesvol toegevoegd</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documenten</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="ExternalCode" xml:space="preserve">
+    <value>Externe code</value>
+  </data>
+  <data name="ExtraInformation" xml:space="preserve">
+    <value>Overige gegevens</value>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Van</value>
+  </data>
+  <data name="HouseCreated" xml:space="preserve">
+    <value>Woning is succesvol aangemaakt</value>
+  </data>
+  <data name="Houses" xml:space="preserve">
+    <value>Woningen</value>
+  </data>
+  <data name="ImageCreated" xml:space="preserve">
+    <value>Afbeelding is succesvol toegevoegd</value>
+  </data>
+  <data name="LanguageChangedToEN" xml:space="preserve">
+    <value>Taal veranderd naar Engels</value>
+  </data>
+  <data name="LanguageChangedToNL" xml:space="preserve">
+    <value>Taal veranderd naar Nederlands</value>
+  </data>
+  <data name="NoDescription" xml:space="preserve">
+    <value>Vul eerst een omschrijving in</value>
+  </data>
+  <data name="NoHouseSelected" xml:space="preserve">
+    <value>Selecteer eerst een woning</value>
+  </data>
+  <data name="NoInternet" xml:space="preserve">
+    <value>U heeft geen internet verbinding</value>
+  </data>
+  <data name="NoLocation" xml:space="preserve">
+    <value>Helaas kan de locatie van de woning niet bepaald worden</value>
+  </data>
+  <data name="NoMap" xml:space="preserve">
+    <value>De lokale navigatie app kan niet worden geopend</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Nummer</value>
+  </data>
+  <data name="NumberEmpty" xml:space="preserve">
+    <value>Vul eerst een huisnummer in</value>
+  </data>
+  <data name="NumberInputNotSupported" xml:space="preserve">
+    <value>Het huisnummer mag alleen bestaan uit nummers</value>
+  </data>
+  <data name="Photos" xml:space="preserve">
+    <value>Foto's</value>
+  </data>
+  <data name="PickDocument" xml:space="preserve">
+    <value>Selecteer je documenten</value>
+  </data>
+  <data name="PickImage" xml:space="preserve">
+    <value>Selecteer je afbeeldingen</value>
+  </data>
+  <data name="ServiceContract" xml:space="preserve">
+    <value>Servicecontract</value>
+  </data>
+  <data name="ServiceOrders" xml:space="preserve">
+    <value>Serviceorders</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Straat</value>
+  </data>
+  <data name="StreetEmpty" xml:space="preserve">
+    <value>Vul eerst een straat in</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Indienen</value>
+  </data>
+  <data name="Thumbnail" xml:space="preserve">
+    <value>Voorbeeld afbeelding</value>
+  </data>
+  <data name="Till" xml:space="preserve">
+    <value>Tot</value>
+  </data>
+  <data name="ZipCode" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
+  <data name="ZipCodeEmpty" xml:space="preserve">
+    <value>Vul eerst een postcode in</value>
+  </data>
+</root>

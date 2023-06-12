@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Woningpaspoort.View.Mobile.WorkPage"
+             xmlns:model="clr-namespace:Woningpaspoort.Model"
+             xmlns:viewmodel="clr-namespace:Woningpaspoort.ViewModel"
+             x:DataType="viewmodel:HouseDetailsViewModel">
+    <Grid
+        ColumnDefinitions="*"
+        RowDefinitions="Auto,*"
+        RowSpacing="0">
+        <Frame
+            Grid.Row="0"
+            Padding="10, 40, 10, 0"
+            Margin="0,-40,0,0"
+            CornerRadius="20"
+            BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray600}}"
+            BorderColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray600}}">
+            <Grid
+                Grid.Row="1"
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5">
+                <StackLayout
+                Grid.Column="0"
+                Padding="15,10">
+                    <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15">
+                        <Image
+                            Grid.Column="0"
+                            Source="icon_key.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <Label 
+                            Grid.Column="1"
+                            Text="{Binding House.Code}"
+                            TextColor="White"
+                            VerticalOptions="Center"/>
+                    </Grid>
+                    <Grid
+                        Grid.Row="1"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15">
+                        <Image
+                            Grid.Column="0"
+                            Source="icon_address.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <StackLayout
+                            Grid.Column="1">
+                            <Grid
+                                ColumnDefinitions="auto,auto,auto"
+                                ColumnSpacing="5">
+                                <Label Grid.Column="0" TextColor="White" Text="{Binding House.Street}"/>
+                                <Label Grid.Column="1" TextColor="White" Text="{Binding House.Number}"/>
+                                <Label Grid.Column="2" TextColor="White" Text="{Binding House.Addition}"/>
+                            </Grid>
+                            <Grid
+                                ColumnDefinitions="auto,auto"
+                                ColumnSpacing="5">
+                                <Label Grid.Column="0" TextColor="White" Text="{Binding House.ZipCode}"/>
+                                <Label Grid.Column="1" TextColor="White" Text="{Binding House.City}"/>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    Padding="15,10"
+                    HorizontalOptions="End">
+                    <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                        <Image
+                            Grid.Column="1"
+                            Source="icon_customer.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.Customer}" 
+                            TextColor="White"/>
+                    </Grid>
+                    <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                        <Image
+                            Grid.Column="1"
+                            Source="icon_externalcode.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.ExternalCode}" 
+                            TextColor="White"/>
+                    </Grid>
+                    <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                        <Image
+                            Grid.Column="1"
+                            Source="icon_calendar.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.YearBuild}" 
+                            TextColor="White"/>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+        </Frame>
+        <CollectionView
+            x:Name="WorkPageCollectionView"
+            Grid.ColumnSpan="1"
+            Grid.Row="1"
+            ItemsSource="{Binding House.serviceorders}"
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Serviceorder">
+                    <Grid Padding="15,5">
+                        <Frame Padding="0" HeightRequest="125">
+                            <Grid
+                                ColumnDefinitions="Auto,Auto,Auto"
+                                ColumnSpacing="5">
+                                <StackLayout
+                                    Grid.Column="0"
+                                    Padding="5"
+                                    BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}">
+                                </StackLayout>
+                                <StackLayout
+                                    Grid.Column="1"
+                                    Padding="10">
+                                    <Label Text="{Binding ServiceorderNo}"/>
+                                    <Label Text="{Binding Description}"/>
+                                    <Label Text="{Binding OrderSoort}"/>
+                                    <Label Text="{Binding OrderType}"/>
+                                    <Label Text="{Binding Status}"/>
+                                </StackLayout>
+                                <StackLayout
+                                    Grid.Column="3"
+                                    Padding="10">
+                                    <Label Text="{Binding Customer}"/>
+                                    <Label Text="{Binding CustomerReference}"/>
+                                    <Label Text="{Binding OrderManager}"/>
+                                    <Label Text="{Binding StartingDate}"/>
+                                    <Label Text="{Binding EndDate}"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

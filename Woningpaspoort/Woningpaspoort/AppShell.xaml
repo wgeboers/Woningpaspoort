@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<simpleShell:SimpleShell
+    x:Class="Woningpaspoort.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Woningpaspoort"
+    xmlns:controls="clr-namespace:Woningpaspoort.View.Controls"
+    xmlns:simpleShell="clr-namespace:SimpleToolkit.SimpleShell;assembly=SimpleToolkit.SimpleShell">
+
+    <TabBar x:Name="tabBar">
+
+    </TabBar>
+
+    <simpleShell:SimpleShell.Content>
+        <Grid IgnoreSafeArea="True">
+            <simpleShell:SimpleNavigationHost
+                x:Name="pageContainer"/>
+            <controls:TabBarView
+                x:Name="tabBarView"
+                VerticalOptions="End" HorizontalOptions="Fill"
+                CurrentPageSelectionChanged="TabBarViewCurrentPageChanged"/>
+            <Rectangle
+                x:Name="bottomBackgroundRectangle"
+                Background="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray500}}"
+                VerticalOptions="End"/>
+        </Grid>
+    </simpleShell:SimpleShell.Content>
+</simpleShell:SimpleShell>
+    
+    
+    <!--<Shell
+    x:Class="Woningpaspoort.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Woningpaspoort"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="True">
+
+    <FlyoutItem Title="Home">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Shell.BackgroundColor="Black"
+            Route="MainPage" />
+    </FlyoutItem>
+
+</Shell>-->

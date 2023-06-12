@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Woningpaspoort
+build_property.ProjectDir = C:\Users\wesle\OneDrive\Documenten\Projecten\Woningpaspoort\Woningpaspoort\Woningpaspoort\
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/AddDocumentPopUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.AddDocumentPopUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AddDocumentPopUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AddDocumentPopUpPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/AddHousePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.AddHousePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AddHousePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AddHousePage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/AddImagePopUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.AddImagePopUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AddImagePopUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AddImagePopUpPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/Controls/TabBarIconView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.Controls.TabBarIconView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Controls\TabBarIconView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Controls\TabBarIconView.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/Controls/TabBarView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.Controls.TabBarView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Controls\TabBarView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Controls\TabBarView.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/DocumentsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.DocumentsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\DocumentsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\DocumentsPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/FilterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.FilterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\FilterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\FilterPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/HouseDetailsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.HouseDetailsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\HouseDetailsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\HouseDetailsPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/ManagePortalPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.ManagePortalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ManagePortalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ManagePortalPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/MapsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.MapsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MapsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MapsPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/OpenImagePopUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.OpenImagePopUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\OpenImagePopUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\OpenImagePopUpPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/PhotosPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.PhotosPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PhotosPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PhotosPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/QrPopUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.QrPopUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\QrPopUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\QrPopUpPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/QrScanPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.QrScanPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\QrScanPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\QrScanPage.xaml
+
+[C:/Users/wesle/OneDrive/Documenten/Projecten/Woningpaspoort/Woningpaspoort/Woningpaspoort/View/WorkPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Woningpaspoort.View.WorkPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\WorkPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\WorkPage.xaml

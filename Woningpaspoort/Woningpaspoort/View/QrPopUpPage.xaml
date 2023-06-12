@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+    x:Class="Woningpaspoort.View.Mobile.QrPopUpPage">
+    <Frame
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <VerticalStackLayout>
+            <cv:BarcodeImage
+                x:Name="houseQrCode"
+                WidthRequest="250"
+                HeightRequest="250"
+                BarcodeHeight="250"
+                BarcodeWidth="250"
+                BarcodeMargin="1"
+                BarcodeFormat="QR_CODE"/>
+        </VerticalStackLayout>
+    </Frame>
+</mopups:PopupPage>

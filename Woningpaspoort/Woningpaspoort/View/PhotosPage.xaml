@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Woningpaspoort.View.Mobile.PhotosPage"
+             xmlns:model="clr-namespace:Woningpaspoort.Model"
+             xmlns:viewmodel="clr-namespace:Woningpaspoort.ViewModel"
+             x:DataType="viewmodel:HouseDetailsViewModel">
+    <Grid
+        ColumnDefinitions="*"
+        RowDefinitions="*,Auto"
+        RowSpacing="0">
+        <Grid
+            RowDefinitions="Auto, *"
+            RowSpacing="0">
+            <Frame
+                Grid.Row="0"
+                Padding="10, 40, 10, 0"
+                Margin="0,-40,0,0"
+                CornerRadius="20"
+                BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray600}}"
+                BorderColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray600}}">
+                <Grid
+                Grid.Row="1"
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5">
+                    <StackLayout
+                Grid.Column="0"
+                Padding="15,10">
+                        <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15">
+                            <Image
+                            Grid.Column="0"
+                            Source="icon_key.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                            <Label 
+                            Grid.Column="1"
+                            Text="{Binding House.Code}"
+                            TextColor="White"
+                            VerticalOptions="Center"/>
+                        </Grid>
+                        <Grid
+                        Grid.Row="1"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15">
+                            <Image
+                            Grid.Column="0"
+                            Source="icon_address.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                            <StackLayout
+                            Grid.Column="1">
+                                <Grid
+                                ColumnDefinitions="auto,auto,auto"
+                                ColumnSpacing="5">
+                                    <Label Grid.Column="0" TextColor="White" Text="{Binding House.Street}"/>
+                                    <Label Grid.Column="1" TextColor="White" Text="{Binding House.Number}"/>
+                                    <Label Grid.Column="2" TextColor="White" Text="{Binding House.Addition}"/>
+                                </Grid>
+                                <Grid
+                                ColumnDefinitions="auto,auto"
+                                ColumnSpacing="5">
+                                    <Label Grid.Column="0" TextColor="White" Text="{Binding House.ZipCode}"/>
+                                    <Label Grid.Column="1" TextColor="White" Text="{Binding House.City}"/>
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                    Grid.Column="1"
+                    Padding="15,10"
+                    HorizontalOptions="End">
+                        <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                            <Image
+                            Grid.Column="1"
+                            Source="icon_customer.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                            <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.Customer}" 
+                            TextColor="White"/>
+                        </Grid>
+                        <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                            <Image
+                            Grid.Column="1"
+                            Source="icon_externalcode.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                            <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.ExternalCode}" 
+                            TextColor="White"/>
+                        </Grid>
+                        <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                            <Image
+                            Grid.Column="1"
+                            Source="icon_calendar.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                            <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.YearBuild}" 
+                            TextColor="White"/>
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <CollectionView
+                x:Name="PhotoPageCollectionView"
+                Grid.Row="1"
+                ItemsSource="{Binding House.Images}"
+                ItemsLayout="VerticalGrid,3"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Image">
+                        <Grid Padding="15,5">
+                            <StackLayout>
+                                <Frame
+                                    WidthRequest="100"
+                                    HeightRequest="100"
+                                    Padding="0">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OpenImage"/>
+                                    </Frame.GestureRecognizers>
+                                    <Image
+                                        Aspect="Fill"
+                                        Source="{Binding ExternalURL, FallbackValue=house_thumbnail.png}"/>
+                                </Frame>
+                                <Label HorizontalTextAlignment="Center" Text="{Binding Description}"/>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+  
+        <ImageButton
+            x:Name="addImageButton"
+            HeightRequest="45"
+            WidthRequest="45"
+            CornerRadius="5"
+            Margin="10, 90"
+            Padding="5"
+		    HorizontalOptions="End"
+		    VerticalOptions="End"
+            Source="icon_add.png">
+            <ImageButton.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_AddImage"/>
+            </ImageButton.GestureRecognizers>
+        </ImageButton>
+    </Grid>
+</ContentPage>

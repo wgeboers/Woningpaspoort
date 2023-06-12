@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             x:Class="Woningpaspoort.View.Mobile.HouseDetailsPage"
+             xmlns:model="clr-namespace:Woningpaspoort.Model"
+             xmlns:viewmodel="clr-namespace:Woningpaspoort.ViewModel"
+             x:DataType="viewmodel:HouseDetailsViewModel">
+    <Grid
+        RowDefinitions="Auto,Auto,*">
+        <Image
+            x:Name="DetailsImage"
+            Grid.Row="0"
+            VerticalOptions="Start"
+            Aspect="Fill"
+            Source="{Binding House.Thumbnail.ExternalURL, FallbackValue=house_thumbnail.png}"/>
+        <Frame
+            Grid.Row="1"
+            Margin="0,-20"
+            CornerRadius="20"
+            BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray600}}"
+            BorderColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray600}}"
+            Padding="0,0,0,20">
+            <Grid
+                Grid.Row="1"
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5">
+                <StackLayout
+                    Grid.Column="0"
+                    Padding="15,10">
+                    <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15">
+                        <Image
+                            Grid.Column="0"
+                            Source="icon_key.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <Label 
+                            Grid.Column="1"
+                            Text="{Binding House.Code}"
+                            TextColor="White"
+                            VerticalOptions="Center"/>
+                    </Grid>
+                    <Grid
+                        Grid.Row="1"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15">
+                        <Image
+                            Grid.Column="0"
+                            Source="icon_address.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <StackLayout
+                            Grid.Column="1">
+                            <Grid
+                                ColumnDefinitions="auto,auto,auto"
+                                ColumnSpacing="5">
+                                <Label Grid.Column="0" TextColor="White" Text="{Binding House.Street}"/>
+                                <Label Grid.Column="1" TextColor="White" Text="{Binding House.Number}"/>
+                                <Label Grid.Column="2" TextColor="White" Text="{Binding House.Addition}"/>
+                            </Grid>
+                            <Grid
+                                ColumnDefinitions="auto,auto"
+                                ColumnSpacing="5">
+                                <Label Grid.Column="0" TextColor="White" Text="{Binding House.ZipCode}"/>
+                                <Label Grid.Column="1" TextColor="White" Text="{Binding House.City}"/>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    Padding="15,10"
+                    HorizontalOptions="End">
+                    <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                        <Image
+                            Grid.Column="1"
+                            Source="icon_customer.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.Customer}" 
+                            TextColor="White"/>
+                    </Grid>
+                    <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                        <Image
+                            Grid.Column="1"
+                            Source="icon_externalcode.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.ExternalCode}" 
+                            TextColor="White"/>
+                    </Grid>
+                    <Grid
+                        Grid.Row="0"
+                        ColumnDefinitions="Auto,*"
+                        ColumnSpacing="15"
+                        HorizontalOptions="End">
+                        <Image
+                            Grid.Column="1"
+                            Source="icon_calendar.png"
+                            HeightRequest="20"
+                            VerticalOptions="Center"/>
+                        <Label 
+                            Grid.Column="0"
+                            HorizontalOptions="End" 
+                            Text="{Binding House.YearBuild}" 
+                            TextColor="White"/>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+        </Frame>
+        <ScrollView
+            Grid.Row="2"
+            BackgroundColor="#e6e6e6">
+            <VerticalStackLayout
+            Grid.Column="0"
+            Padding="25"
+                Margin="0,0,0,70">
+                <Frame
+                BorderColor="White"
+                BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray500}}"
+                Padding="10"
+                Margin="0,0,0,10">
+                    <Grid
+                    ColumnDefinitions="Auto,*"
+                    ColumnSpacing="5">
+                        <Image
+                        Grid.Column="0"
+                        Source="{AppThemeBinding Light=icon_daeb.png, Dark=icon_daeb_dark.png}"
+                        HeightRequest="50"
+                        VerticalOptions="Center"/>
+                        <Grid
+                        Grid.Column="1"
+                        RowDefinitions="*,*"
+                        ColumnSpacing="5">
+                            <Label Grid.Row="0" Text="{loc:Translate Daeb}" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Text="{Binding House.Daeb}"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                <Frame
+                BorderColor="White"
+                BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray500}}"
+                Padding="10"
+                Margin="0,0,0,10">
+                    <Grid
+                    ColumnDefinitions="Auto,*"
+                    ColumnSpacing="5">
+                        <Frame
+                        Grid.Column="0"
+                        HeightRequest="50"
+                        Padding="10"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        BorderColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        CornerRadius="50">
+                            <Image
+                            Grid.Column="0"
+                            Source="icon_customer.png"
+                            VerticalOptions="Center"/>
+                        </Frame>
+                        <Grid
+                        Grid.Column="1"
+                        RowDefinitions="*,Auto"
+                        ColumnSpacing="5">
+                            <Label Grid.Row="0" Text="{loc:Translate Complex}" FontAttributes="Bold"/>
+                            <CollectionView
+                            Grid.Row="1"
+                            ItemsSource="{Binding House.Complexes}"
+                            SelectionMode="None">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate x:DataType="model:Complex">
+                                        <Label Text="{Binding Name}"/>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                <Frame
+                BorderColor="White"
+                BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray500}}"
+                Padding="10"
+                Margin="0,0,0,10">
+                    <Grid
+                    ColumnDefinitions="Auto,*"
+                    ColumnSpacing="5">
+                        <Frame
+                        Grid.Column="0"
+                        HeightRequest="50"
+                        Padding="10"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        BorderColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        CornerRadius="50">
+                            <Image
+                            Grid.Column="0"
+                            Source="icon_contract.png"
+                            VerticalOptions="Center"/>
+                        </Frame>
+                        <Grid
+                            Grid.Column="1"
+                            RowDefinitions="*,Auto">
+                            <Label 
+                                Grid.Row="0" 
+                                Text="{loc:Translate ServiceContract}" 
+                                FontAttributes="Bold"/>
+                            <CollectionView
+                                Grid.Row="1"
+                                ItemsSource="{Binding House.ServiceContracts}"
+                                SelectionMode="None">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate 
+                                        x:DataType="model:ServiceContract">
+                                        <Label 
+                                            Text="{Binding Name}"/>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                <Frame
+                BorderColor="White"
+                BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray500}}"
+                Padding="10"
+                Margin="0,0,0,10">
+                    <Grid
+                    ColumnDefinitions="Auto,*"
+                    ColumnSpacing="5">
+                        <Frame
+                        Grid.Column="0"
+                        HeightRequest="50"
+                        Padding="10"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        BorderColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        CornerRadius="50">
+                            <Image
+                            Grid.Column="0"
+                            Source="icon_werkzaamheden.png"
+                            VerticalOptions="Center"/>
+                        </Frame>
+                        <Grid
+                        Grid.Column="1"
+                        RowDefinitions="*,*"
+                        ColumnSpacing="5">
+                            <Label Grid.Row="0" Text="{loc:Translate ServiceOrders}" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Text="{Binding House.serviceorders.Count}"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                <Frame
+                BorderColor="White"
+                BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray500}}"
+                Padding="10"
+                Margin="0,0,0,10">
+                    <Grid
+                    ColumnDefinitions="Auto,*"
+                    ColumnSpacing="5">
+                        <Frame
+                        Grid.Column="0"
+                        HeightRequest="50"
+                        Padding="10"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        BorderColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        CornerRadius="50">
+                            <Image
+                            Grid.Column="0"
+                            Source="icon_document.png"
+                            VerticalOptions="Center"/>
+                        </Frame>
+                        <Grid
+                        Grid.Column="1"
+                        RowDefinitions="*,*"
+                        ColumnSpacing="5">
+                            <Label Grid.Row="0" Text="{loc:Translate Documents}" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Text="{Binding House.Documents.Count}"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                <Frame
+                BorderColor="White"
+                BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray500}}"
+                Padding="10"
+                Margin="0,0,0,10">
+                    <Grid
+                    ColumnDefinitions="Auto,*"
+                    ColumnSpacing="5">
+                        <Frame
+                        Grid.Column="0"
+                        HeightRequest="50"
+                        Padding="10"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        BorderColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}"
+                        CornerRadius="50">
+                            <Image
+                            Grid.Column="0"
+                            Source="icon_foto.png"
+                            VerticalOptions="Center"/>
+                        </Frame>
+                        <Grid
+                        Grid.Column="1"
+                        RowDefinitions="*,*"
+                        ColumnSpacing="5">
+                            <Label Grid.Row="0" Text="{loc:Translate Photos}" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Text="{Binding House.Images.Count}"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+        <ImageButton
+            HeightRequest="45"
+            WidthRequest="45"
+            CornerRadius="5"
+            Margin="10"
+            Padding="5"
+		    HorizontalOptions="Start"
+		    VerticalOptions="Start"
+            Source="icon_back.png">
+            <ImageButton.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_NavigateMainPage"/>
+            </ImageButton.GestureRecognizers>
+        </ImageButton>
+
+        <Grid
+            ColumnDefinitions="auto,auto"
+            ColumnSpacing="5"
+            HorizontalOptions="End"
+		    VerticalOptions="Start">
+            <ImageButton
+                Grid.Column="0"
+                HeightRequest="45"
+                WidthRequest="45"
+                CornerRadius="5"
+                Margin="0,10,0,0"
+                Padding="5"
+		        HorizontalOptions="End"
+		        VerticalOptions="Start"
+                Source="icon_route.png">
+                <ImageButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_OpenNavigation"/>
+                </ImageButton.GestureRecognizers>
+            </ImageButton>
+            <ImageButton
+                x:Name="NavigateQRButton"
+                Grid.Column="1"
+                HeightRequest="45"
+                WidthRequest="45"
+                CornerRadius="5"
+                Margin="0,10,10,0"
+                Padding="5"
+		        HorizontalOptions="End"
+		        VerticalOptions="Start"
+                Source="icon_qr.png">
+                <ImageButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_QRpopUp"/>
+                </ImageButton.GestureRecognizers>
+            </ImageButton>
+        </Grid>
+    </Grid>
+</ContentPage>

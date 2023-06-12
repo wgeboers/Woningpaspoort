@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             x:Class="Woningpaspoort.View.Mobile.ManagePortalPage">
+    <ScrollView>
+        <Grid
+            RowDefinitions="Auto,*"
+            RowSpacing="10">
+            <Grid
+                Padding="20"
+                Grid.Row="0"
+                ColumnDefinitions="*,Auto,*"
+                ColumnSpacing="5">
+                <Label 
+                    Grid.Column="1" 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="{loc:Translate AdminPortal}"/>
+                <ImageButton
+                    Grid.Column="2"
+                    HeightRequest="45"
+                    WidthRequest="45"
+                    HorizontalOptions="End"
+                    CornerRadius="5"
+                    Padding="5"
+                    Source="icon_close.png">
+                    <ImageButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_NavigateMainPage"/>
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
+            </Grid>
+            <StackLayout
+                Grid.Row="1"
+                HorizontalOptions="Start"
+                Padding="20,0,0,0">
+                <Label 
+                    Text="{loc:Translate Houses}"
+                    FontSize="25"
+                    HorizontalOptions="Start"/>
+                <Label 
+                    Text="{loc:Translate AddHouse}"
+                    TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray600}}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_AddHousePopUp"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

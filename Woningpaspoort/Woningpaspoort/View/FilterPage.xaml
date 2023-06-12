@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             x:Class="Woningpaspoort.View.Mobile.FilterPage"
+             xmlns:model="clr-namespace:Woningpaspoort.Model"
+             xmlns:viewmodel="clr-namespace:Woningpaspoort.ViewModel"
+             x:DataType="viewmodel:HousesViewModel">
+    <ScrollView>
+        <Grid
+            RowDefinitions="Auto,*"
+            RowSpacing="10">
+            <Grid
+                Padding="20"
+                Grid.Row="0"
+                ColumnDefinitions="*,*,*"
+                ColumnSpacing="5">
+                <Label 
+                    Grid.Column="1" 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="{loc:Translate Filters}"/>
+                <ImageButton
+                    Grid.Column="2"
+                    HeightRequest="45"
+                    WidthRequest="45"
+                    HorizontalOptions="End"
+                    CornerRadius="5"
+                    Padding="5"
+                    Source="icon_close.png">
+                    <ImageButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_NavigateMainPage"/>
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
+            </Grid>
+            <VerticalStackLayout
+                Grid.Row="1"
+                Padding="30,0"
+                VerticalOptions="Start">
+                <Label 
+                Text="{loc:Translate AddressInformation}"
+                FontAttributes="Bold"/>
+                <Grid
+                ColumnDefinitions="*,Auto,Auto"
+                    Padding="0,0,0,10"
+                ColumnSpacing="5">
+                    <Entry
+                    x:Name="streetEntry"
+                    Grid.Column="0"
+                    Placeholder="{loc:Translate Street}"
+                    Text="{Binding StreetFilter}"/>
+                    <Entry
+                    x:Name="numberEntry"
+                    Grid.Column="1"
+                    Placeholder="{loc:Translate Number}"
+                    Text="{Binding NumberFilter}"
+                    Keyboard="Numeric"/>
+                    <Entry
+                    x:Name="additionEntry"
+                    Grid.Column="2"
+                    Placeholder="{loc:Translate Addition}"
+                    Text="{Binding AdditionFilter}"/>
+                </Grid>
+                <Grid
+                ColumnDefinitions="Auto,*"
+                    Padding="0,0,0,10"
+                ColumnSpacing="5">
+                    <Entry
+                    x:Name="zipcodeEntry"
+                    Grid.Column="0"
+                    Placeholder="{loc:Translate ZipCode}"
+                    Text="{Binding ZipcodeFilter}"/>
+                    <Entry
+                    x:Name="cityEntry"
+                    Grid.Column="1"
+                    Placeholder="{loc:Translate City}"
+                    Text="{Binding CityFilter}"/>
+                </Grid>
+                <Entry
+                x:Name="countryEntry"
+                Placeholder="{loc:Translate Country}"
+                Text="{Binding CountryFilter}"/>
+
+                <Label 
+                Text="{loc:Translate CustomerInformation}"
+                Margin="0,15,0,0"
+                FontAttributes="Bold"/>
+                <Picker
+                x:Name="customerPicker"
+                Title="{loc:Translate Customer}"/>
+
+                <Label 
+                Text="{loc:Translate ExtraInformation}"
+                FontAttributes="Bold"
+                Margin="0,15,0,0"/>
+                <Label 
+                Text="{loc:Translate BuildYear}"/>
+                <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5">
+                    <Entry
+                    Grid.Column="0"
+                    x:Name="fromYearEntry"
+                    Placeholder="{loc:Translate From}"
+                    Keyboard="Numeric"
+                    Text="{Binding YearFromFilter}"/>
+                    <Entry
+                    Grid.Column="1"
+                    x:Name="tillYearEntry"
+                    Placeholder="{loc:Translate Till}"
+                    Keyboard="Numeric"
+                    Text="{Binding YearTillFilter}"/>
+                </Grid>
+                <Label 
+                Text="{loc:Translate Daeb}"/>
+                <Switch 
+                x:Name="daebEntry"
+                IsToggled="{Binding DaebFilter}"
+                HorizontalOptions="Start"/>
+
+
+                <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5">
+                    <Button 
+                        Grid.Column="0"
+                        Text="{loc:Translate Clear}">
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_ClearFilter"/>
+                        </Button.GestureRecognizers>
+                    </Button>
+                    <Button 
+                        Text="{loc:Translate Submit}"
+                        Grid.Column="1">
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_SubmitFilter"/>
+                        </Button.GestureRecognizers>
+                    </Button>
+                </Grid>
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
