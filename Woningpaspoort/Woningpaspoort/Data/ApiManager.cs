@@ -9,7 +9,7 @@ namespace Woningpaspoort.Data;
 
 public class ApiManager
 {
-    static readonly string BaseAddress = "https://e47b-37-114-89-117.ngrok-free.app";
+    static readonly string BaseAddress = "https://4ecc-85-145-204-116.ngrok-free.app";
     //static readonly string BaseAddress = "http://192.168.1.240:5045";
 
     static readonly string Url = $"{BaseAddress}/api/";
